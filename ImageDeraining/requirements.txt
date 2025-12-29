@@ -96,6 +96,7 @@ tensorflow==2.20.0
 termcolor==3.2.0
 threadpoolctl==3.6.0
 toml==0.10.2
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.9.1
 torchvision==0.24.1
 tornado==6.5.2
