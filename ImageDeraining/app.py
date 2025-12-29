@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_PATH = "./models/generator_best.pth"   
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "generator_best.pth")   
 
 @st.cache_resource
 def load_model():
