@@ -21,7 +21,7 @@ MODEL_PATH = "./models/generator_best.pth"
 @st.cache_resource
 def load_model():
     model = UnetGenerator().to(DEVICE)
-    checkpoint = torch.load(MODEL_PATH, map_location=DEVICE)
+    checkpoint = torch.load(MODEL_PATH, map_location=DEVICE, weights_only=False)
     model.load_state_dict(checkpoint)
     model.eval()
     return model
